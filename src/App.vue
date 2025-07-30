@@ -1,11 +1,15 @@
 <script setup>
 
-import Greeting from './components/Welcome.vue'
+import Message from './components/Message.vue'
+import Project from './components/Project.vue'
+import Welcome from './components/Welcome.vue'
 
 </script>
 
 <template>
-  <Greeting username="rhythm" />
+  <Welcome username="rhythm123" />
+  <Message />
+  <Project />
 </template>
 
 <style scoped></style>
