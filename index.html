@@ -8,26 +8,23 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
-        <h4>{{ name }}</h4>
-        <button @click="changeMessage">Change</button>
+        <hello-message></hello-message>
     </div>
 </body>
 <script>
     const { createApp } = Vue;
-    createApp({
+
+    const HelloMessage = {
+        template: `<h2>{{ greeting }}</h2>`,
         data() {
             return {
-                message: 'Hello Vue!',
-                name: 'Rhythm'
+                greeting: 'Hello from component'
             };
-        },
-        methods: {
-            changeMessage() {
-                this.message = 'Message Changed!';
-                this.name = 'Unmukt';
-            }
         }
-    }).mount('#app');
+    };
+
+    createApp({})
+        .component('hello-message', HelloMessage)
+        .mount('#app');
 </script>
 </html>
