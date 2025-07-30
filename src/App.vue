@@ -1,18 +1,11 @@
 <script setup>
 
-import { ref } from 'vue'
-
-const name = ref('Sachin')
+import Greeting from './components/Welcome.vue'
 
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <div>Hello, {{ name }}</div>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <Greeting username="rhythm" />
 </template>
 
 <style scoped></style>
