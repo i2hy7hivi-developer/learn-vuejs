@@ -8,19 +8,15 @@
 </head>
 <body>
     <div id="app">
-        <hello-message></hello-message>
+        <hello-message name="RhythmDubey"></hello-message>
     </div>
 </body>
 <script>
     const { createApp } = Vue;
 
     const HelloMessage = {
-        template: `<h2>{{ greeting }}</h2>`,
-        data() {
-            return {
-                greeting: 'Hello from component'
-            };
-        }
+        props: ['name'],
+        template: `<h2>{{ name }}</h2>`,
     };
 
     createApp({})
