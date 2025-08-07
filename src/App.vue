@@ -6,20 +6,15 @@ import Card from './components/Card.vue'
 
 <template>
   <Card>
-    <h3>Project One</h3>
-    <p>Paragraph ...</p>
-  </Card>
-  <Card>
-    <h3>Project One</h3>
-    <p>Paragraph ...</p>
-  </Card>
-  <Card>
-    <h3>Project One</h3>
-    <p>Paragraph ...</p>
-  </Card>
-  <Card>
-    <h3>Project One</h3>
-    <p>Paragraph ...</p>
+    <template #header>
+      Project: MyRentalSpot
+    </template>
+
+    This project is about managing rentals.
+
+    <template #footer>
+      Created: August 2025
+    </template>
   </Card>
 </template>
 

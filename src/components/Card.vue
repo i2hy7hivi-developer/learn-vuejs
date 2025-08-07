@@ -1,6 +1,16 @@
 <template>
   <div class="card">
-    <slot />
+    <header class="card-header">
+      <slot name="header" />
+    </header>
+
+    <main class="card-body">
+      <slot />
+    </main>
+
+    <footer class="card-footer">
+      <slot name="footer" />
+    </footer>
   </div>
 </template>
 
@@ -9,10 +19,19 @@
 
 <style scoped>
 .card {
-  padding: 16px;
   border: 1px solid #ccc;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 10px;
   margin-bottom: 1rem;
-  background: #f9f9f9;
+  background: #fefefe;
+}
+.card-header,
+.card-footer {
+  background: #eee;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.card-body {
+  padding: 1rem 0;
 }
 </style>
