@@ -5,17 +5,12 @@ import Card from './components/Card.vue'
 </script>
 
 <template>
-  <Card>
-    <template #header>
-      Project: MyRentalSpot
-    </template>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
 
-    This project is about managing rentals.
-
-    <template #footer>
-      Created: August 2025
-    </template>
-  </Card>
+  <router-view />
 </template>
 
 <style scoped></style>
